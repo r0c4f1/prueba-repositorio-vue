@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: "https://prueba-repositorio-vue.onrender.com/",
+    origin: "https://prueba-repositorio-vue-e8fg.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
