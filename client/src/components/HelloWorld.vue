@@ -6,9 +6,7 @@ defineProps<{ msg: string }>();
 const count = ref(0);
 
 onMounted(async () => {
-  let queri = await fetch(
-    "https://prueba-repositorio-vue-e8fg.vercel.app/api/data"
-  );
+  let queri = await fetch("/api/data");
   let data = await queri.json();
 
   console.log(data);
