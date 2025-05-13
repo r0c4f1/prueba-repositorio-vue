@@ -3,15 +3,21 @@ import { ref, onMounted } from "vue";
 
 defineProps<{ msg: string }>();
 
-const count = ref(0);
+let count = ref(0);
 
-onMounted(async () => {
+async function getData() {
   let queri = await fetch(
     "https://prueba-repositorio-vue.onrender.com/api/data"
   );
   let data = await queri.json();
 
   console.log(data);
+
+  count.value++;
+}
+
+onMounted(() => {
+  getData();
 });
 </script>
 
@@ -19,7 +25,7 @@ onMounted(async () => {
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="getData">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
