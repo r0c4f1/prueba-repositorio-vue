@@ -4,10 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc --watch",
-    "dev": "node --watch dist/main.js",
-    "start": "node dist/main.js"
+    "start": "node dist/main.js",
+    "build": "tsc",
+    "dev": "node --watch src/main.ts"
   },
   "keywords": [],
   "author": "",
