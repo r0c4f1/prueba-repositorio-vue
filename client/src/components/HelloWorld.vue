@@ -6,7 +6,7 @@ defineProps<{ msg: string }>();
 const count = ref(0);
 
 onMounted(async () => {
-  let queri = await fetch("/api/data");
+  let queri = await fetch("https://prueba-repositorio-vue.onrender.com/api/data");
   let data = await queri.json();
 
   console.log(data);
